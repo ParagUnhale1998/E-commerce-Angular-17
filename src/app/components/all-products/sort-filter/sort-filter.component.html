@@ -1,0 +1,68 @@
+<div class="z-40 bg-white container filter-container"
+    [ngClass]="isScrolled ? 'fixed top-12 md:top-16 shadow-md md:shadow-none' : 'relative'">
+    
+    <div class="flex justify-center items-center px-2 container filter-box">
+        <div class="w-1/2 relevance-container">
+            <div class="relative font-primaryFont cursor-pointer group">
+                <div (click)="isVisibleFilter = !isVisibleFilter"
+                    class="flex justify-between items-center border-y-[1px] bg-white px-4 py-2 border-r-[1px]">
+                    <a class="lg:mx-4 py-2 font-medium text-base text-primary menu-hover">{{ selectedSort || 'Sort'
+                        }}</a>
+                    <span>
+                        <ng-container *ngIf="isVisibleFilter; else chevronUp">
+                            <span class="text-xl">▼</span>
+                        </ng-container>
+                        <ng-template #chevronUp>
+                            <span class="text-xl">▲</span>
+                        </ng-template>
+                    </span>
+                </div>
+
+                <div class="z-50 absolute flex-col bg-gray-100 shadow-xl px-4 py-1 w-full font-primaryFont text-gray-800"
+                    [class.flex]="isVisibleFilter" [class.hidden]="!isVisibleFilter">
+                    <a (click)="handleSortChange('all')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">All</a>
+                    <a (click)="handleSortChange('latest')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">Latest</a>
+                    <a (click)="handleSortChange('newArrival')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">Newly
+                        Added</a>
+                    <a (click)="handleSortChange('bestSeller')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">Best
+                        Seller</a>
+                    <a (click)="handleSortChange('trendings')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">Relevance</a>
+                    <a (click)="handleSortChange('hightolow')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">Price
+                        (High to Low)</a>
+                    <a (click)="handleSortChange('lowtohigh')"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 hover:text-black">Price
+                        (Low to High)</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/2 refine-by-container">
+            <div class="relative cursor-pointer group">
+                <div (click)="isRefineFilter = !isRefineFilter"
+                    class="flex justify-between items-center border-y-[1px] bg-white px-4 py-2 font-primaryFont">
+                    <a class="lg:mx-4 py-2 font-medium hover:font-semibold text-base text-primary menu-hover">Refine
+                        By</a>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M0.8 3.2H3.348C3.6792 4.1288 4.5584 4.8 5.6 4.8C6.6416 4.8 7.5208 4.1288 7.852 3.2H15.2C15.6424 3.2 16 2.8424 16 2.4C16 1.9576 15.6424 1.6 15.2 1.6H7.852C7.5208 0.6712 6.6416 0 5.6 0C4.5584 0 3.6792 0.6712 3.348 1.6H0.8C0.3576 1.6 0 1.9576 0 2.4C0 2.8424 0.3576 3.2 0.8 3.2ZM15.2 12.8H7.852C7.5208 11.8712 6.6416 11.2 5.6 11.2C4.5584 11.2 3.6792 11.8712 3.348 12.8H0.8C0.3576 12.8 0 13.1576 0 13.6C0 14.0424 0.3576 14.4 0.8 14.4H3.348C3.6792 15.3288 4.5584 16 5.6 16C6.6416 16 7.5208 15.3288 7.852 14.4H15.2C15.6424 14.4 16 14.0424 16 13.6C16 13.1576 15.6424 12.8 15.2 12.8ZM15.2 7.2H12.652C12.3208 6.2712 11.4416 5.6 10.4 5.6C9.3584 5.6 8.4792 6.2712 8.148 7.2H0.8C0.3576 7.2 0 7.5576 0 8C0 8.4424 0.3576 8.8 0.8 8.8H8.148C8.4792 9.7288 9.3584 10.4 10.4 10.4C11.4416 10.4 12.3208 9.7288 12.652 8.8H15.2C15.6424 8.8 16 8.4424 16 8C16 7.5576 15.6424 7.2 15.2 7.2ZM5.6 1.6C6.0416 1.6 6.4 1.9584 6.4 2.4C6.4 2.8416 6.0416 3.2 5.6 3.2C5.1584 3.2 4.8 2.8416 4.8 2.4C4.8 1.9584 5.1584 1.6 5.6 1.6ZM5.6 14.4C5.1584 14.4 4.8 14.0416 4.8 13.6C4.8 13.1584 5.1584 12.8 5.6 12.8C6.0416 12.8 6.4 13.1584 6.4 13.6C6.4 14.0416 6.0416 14.4 5.6 14.4ZM10.4 8.8C9.9584 8.8 9.6 8.4416 9.6 8C9.6 7.5584 9.9584 7.2 10.4 7.2C10.8416 7.2 11.2 7.5584 11.2 8C11.2 8.4416 10.8416 8.8 10.4 8.8Z"
+                                fill="#222222" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="z-50 absolute flex-col bg-gray-100 shadow-xl px-4 py-1 w-full h-auto font-primaryFont text-gray-800"
+                    [class.flex]="isRefineFilter" [class.hidden]="!isRefineFilter">
+                    <a *ngFor="let category of categoryImages" (click)="handleCategoryFilter(category.name)"
+                        class="block border-gray-200 md:mx-2 my-1 py-1 border-b font-semibold text-gray-500 text-sm hover:text-black">{{
+                        category.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

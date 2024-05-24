@@ -1,0 +1,22 @@
+<section id="product-slider" class="mt-2">
+  <div class="flex overflow-x-auto slider-container">
+    @for (product of products ; track product.id) {
+      
+      <app-product-card class="flex-shrink-0 m-1 md:m-2 px-2"
+      [ngClass]="howManyProductShowCss ? howManyProductShowCss : ''"
+      [product]="product"
+    ></app-product-card>
+    }
+    
+    <div class="flex justify-center items-center m-0 px-6 all-product-btn">
+      <a routerLink="/products">
+        <button
+          class="hover:shadow-lg px-4 p-3 border text-[12px] text-primary capitalize"
+          style="letter-spacing: 1px"
+        >
+          View all products
+        </button>
+      </a>
+    </div>
+  </div>
+</section>

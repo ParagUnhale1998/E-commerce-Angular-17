@@ -1,0 +1,36 @@
+<section id="filter-products" class="mt-4 w-full">
+    <div class="flex justify-center items-center gap-2 capitalize tabs-container">
+      <button
+        class="px-4 p-1 border font-secondaryFont font-semibold text-md text-primary tracking-[1px] transition-border duration-500 filter-btn"
+        [class.shadow-lg]="activeTab === 'new'"
+        [class.border-black]="activeTab === 'new'"
+        (click)="handleTabClick('new')"
+      >
+        New Drops
+      </button>
+      <button
+        class="px-4 p-1 border font-secondaryFont font-semibold text-md text-primary tracking-[1px] transition-border duration-500 filter-btn"
+        [ngClass]="activeTab === 'trending' ? 'shadow-lg border-black ' : '' "
+        (click)="handleTabClick('trending')"
+      >
+        Most Trending
+      </button>
+    </div>
+    <div class="overflow-hidden container products-container">
+      @if (activeTab === 'new') {
+        <app-product-slider  [products]="newArrivals" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
+        } @else if (activeTab === 'trending') {
+          <app-product-slider  [products]="trending" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
+        } @else {
+          <app-product-slider  [products]="trending" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
+        }
+        <!-- <app-product-slider *ngIf="activeTab === 'new'" [products]="newArrivals" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider> -->
+        <!-- <app-product-slider *ngIf="activeTab === 'trending'" [products]="trending" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider> -->
+    </div>
+    <div class="p-2 view-all-btn w-full text-center">
+      <a routerLink="/products">
+        <button class="hover:shadow-lg px-4 p-1 border hover:border-black font-secondaryFont text-md text-primary tracking-[2px] transition-border duration-300">View All</button>
+      </a>
+    </div>
+  </section>
+  

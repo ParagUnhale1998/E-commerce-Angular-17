@@ -1,0 +1,27 @@
+<div class="flex justify-between items-center px-6 p-4 border-b-[1px] product-view-container w-full container">
+    <div class="font-primaryFont all-products-length">
+      <span class="font-[580] text-sm tracking-wider">{{ filterProductsLength }} Products</span>
+    </div>
+    <div class="flex justify-between items-center product-view-filter cursor-pointer">
+      <div
+        class="flex p-2 border one-product"
+        (click)="setGridLayout('one-product')">
+        <div class="w-[20px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'one-product', 'bg-gray-300': gridLayout !== 'one-product'}"></div>
+      </div>
+      <div
+        class="flex justify-between items-center gap-1 p-2 border two-product"
+        (click)="setGridLayout('two-product')">
+        <div class="w-[5px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'two-product', 'bg-gray-300': gridLayout !== 'two-product'}"></div>
+        <div class="w-[5px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'two-product', 'bg-gray-300': gridLayout !== 'two-product'}"></div>
+      </div>
+      <div
+        class="flex justify-between items-center gap-1 p-2 border four-product"
+        (click)="setGridLayout('four-product')">
+        <div class="w-[5px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'four-product', 'bg-gray-300': gridLayout !== 'four-product'}"></div>
+        <div class="w-[5px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'four-product', 'bg-gray-300': gridLayout !== 'four-product'}"></div>
+        <div class="w-[5px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'four-product', 'bg-gray-300': gridLayout !== 'four-product'}"></div>
+        <div class="w-[5px] h-[20px] box" [ngClass]="{'bg-black': gridLayout === 'four-product', 'bg-gray-300': gridLayout !== 'four-product'}"></div>
+      </div>
+    </div>
+  </div>
+  

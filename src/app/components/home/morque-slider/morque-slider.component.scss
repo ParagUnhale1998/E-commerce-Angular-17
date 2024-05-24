@@ -1,0 +1,16 @@
+/* src/app/morque-slider/morque-slider.component.scss */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee {
+    display: inline-block;
+    animation: marquee 100s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  

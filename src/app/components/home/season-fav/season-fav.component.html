@@ -1,0 +1,20 @@
+<section id="season-fav">
+    <div class="p-3 md:p-0 container">
+      <div class="p-4 w-full text-center heading">
+        <h1 class="font-primaryFont text-3xl uppercase">Seasonal Fav's🌤️</h1>
+      </div>
+      
+      <div class="flex flex-wrap justify-start items-center card-container">
+        <div *ngFor="let product of products; let index = index" 
+             class="relative flex-wrap flex-shrink-0 p-2 w-1/2 md:w-1/4 cursor-pointer overflow-hidden card">
+          <a [routerLink]="['/products']" [queryParams]="{ search: product.name }">
+            <img [src]="product.image" 
+                 alt="" 
+                 class="brightness-normal hover:brightness-75 transform transition-transform duration-500 scale-100 hover:scale-110" />
+            <span class="bottom-2 left-2 absolute bg-black/50 p-2 font-bold font-secondaryFont text-white">{{ product.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  

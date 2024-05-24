@@ -1,0 +1,15 @@
+<!-- src/app/category/category.component.html -->
+<section id="category" class="flex justify-center items-center w-full category-container">
+    <div class="flex justify-self-start items-center gap-2 p-2 pb-2 overflow-x-auto">
+      <img
+        *ngFor="let item of categoryImages; let index = index"
+        [src]="'/assets/category/' + item.image"
+        [alt]="'Category' + index"
+        [title]="item.name"
+        class="cursor-pointer"
+        (click)="handleClick(item.name)"
+        style="width: 100px;"
+      />
+    </div>
+  </section>
+  

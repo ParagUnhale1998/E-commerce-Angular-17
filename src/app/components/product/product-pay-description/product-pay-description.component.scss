@@ -1,0 +1,23 @@
+
+  /* Dropdown  */
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out ,opacity 0.6s ease-in-out;
+  }
+  
+  .dropdown.openPay .dropdown-content {
+    max-height: 250px; /* Adjust the max-height as needed */
+    opacity: 1;
+  }
+  
+  .dropdown.openDescription .dropdown-content{
+    max-height: 800px; 
+    opacity: 1;
+  }
+  
+  .dropdown.openMoreInfo .dropdown-content{
+    max-height: 300px; 
+    opacity: 1;
+  }

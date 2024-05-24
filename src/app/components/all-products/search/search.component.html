@@ -1,0 +1,13 @@
+<div class="py-6 p-2 pt-8 w-full search-container">
+    <div class="flex justify-between item-center px-4 p-2 border w-full search-box">
+        <input class="shadow-none m-0 p-0 border-none w-[80%] outline-none" type="text"
+            placeholder="Search for products in this collection"
+            [(ngModel)]="searchQuery"
+            (keydown)="handleKeyPress($event)"
+            (ngModelChange)="onSearchQueryChange($event)"
+            >
+
+        <i  (click)="filterProductList()" class="text-primary text-xl hover:text-black cursor-pointer fa-search fa-solid"></i>
+
+    </div>
+</div>

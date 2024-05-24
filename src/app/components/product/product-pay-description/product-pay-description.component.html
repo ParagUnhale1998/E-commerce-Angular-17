@@ -1,0 +1,109 @@
+<div class="pay-description-container">
+    <ul class="font-primaryFont tab-menu">
+      <li class="py-1 border-b dropdown" [ngClass]="{'openPay': activeTab === 'pay'}">
+        <p
+          class="flex justify-between items-center p-2 text-primary text-sm tracking-wider cursor-pointer dropdown-trigger"
+          (click)="handleTabClick('pay')"
+          aria-haspopup="true"
+        >
+          EMI / PAY IN 3 OFFERS
+          <i [class]="activeTab === 'pay' ? 'fa-chevron-down fa-solid' : 'fa-chevron-up fa-solid'" class="text-xl"></i>
+        </p>
+        <ul class="flex flex-col justify-start items-start gap-2 px-2 font-primaryFont dropdown-content" aria-label="submenu">
+          <li class="flex pt-4 w-full">
+            <p class="flex flex-wrap justify-start items-start gap-2">
+              or Pay <b class="text-green-700">₹266</b> and rest later via 
+              <img width="120" src="https://websdk-assets.s3.ap-south-1.amazonaws.com/shopify-messaging-app/snitchpay_logo.png" alt="" />
+              <img width="20" src="https://websdk-assets.s3.ap-south-1.amazonaws.com/shopify-messaging-app/info-icon.png" alt="" />
+            </p>
+          </li>
+          <li class="flex w-full">
+            <p class="flex flex-wrap justify-start items-start gap-1 text-sm">
+              or <b>3</b> monthly payments of <b class="text-green-600">₹333</b> with 
+              <img width="80" src="https://assets.snapmint.com/assets/express_checkout/SnapMint_logo.svg" alt="" />
+              <img src="https://assets.snapmint.com/assets/merchant/info.png" alt="" />
+            </p>
+          </li>
+          <li>
+            <p class="text-[12px] text-primary">
+              UPI & Cards Accepted, Online approval in 2 minutes 
+            </p>
+          </li>
+          <li class="flex pb-4 w-full">
+            <p class="flex flex-wrap justify-start items-start gap-1 text-sm">
+              Or 3 interest free payments of <b>₹266.34</b>
+              <img width="70" src="https://www.snitch.co.in/cdn/shop/t/316/assets/brand.svg?v=74745334496592893301707102784" alt="" />
+            </p>
+          </li>
+        </ul>
+      </li>
+  
+      <li class="py-1 border-b dropdown" [ngClass]="{'openDescription': activeTab === 'Description'}">
+        <p
+          class="flex justify-between items-center p-2 text-primary text-sm tracking-wider cursor-pointer dropdown-trigger"
+          (click)="handleTabClick('Description')"
+          aria-haspopup="true"
+        >
+          DESCRIPTION
+          <i [class]="activeTab === 'Description' ? 'fa-chevron-down fa-solid' : 'fa-chevron-up fa-solid'" class="text-xl"></i>
+        </p>
+        <ul class="flex flex-col gap-2 px-2 font-primaryFont dropdown-content" aria-label="submenu">
+          <li class="flex flex-col pt-4 w-full font-bold text-sm">
+            PRODUCT SPECIFICATION
+            <ul class="px-6 p-4 text-primary text-sm list-disc">
+              <li>Short Sleeves</li>
+              <li>Printed Design</li>
+              <li>Spread Collar</li>
+              <li>Curved Hem Design</li>
+              <li>Spare Buttons Included</li>
+            </ul>
+          </li>
+          <p class="flex justify-start items-start gap-2 font-primaryFont text-sm">
+            <b>FABRIC:</b> 100% Rayon.
+          </p>
+          <p class="flex justify-start items-start gap-2 font-primaryFont text-sm">
+            <b>FIT:</b> Slim Fit
+          </p>
+          <p class="flex justify-start items-start gap-2 font-primaryFont text-sm">
+            <b>SIZE:</b> Model is wearing a M size
+          </p>
+          <p class="flex justify-start items-start gap-2 font-primaryFont text-sm">
+            <b>Model Height:</b> 6 Feet
+          </p>
+          <p class="font-primaryFont text-sm">
+            <b class="mr-2">WASH CARE:</b>Cold machine wash. For more details see the wash care label attached.
+          </p>
+          <p class="flex justify-start items-start gap-2 pb-4 font-primaryFont font-semibold text-sm">
+            Actual colour of the product may vary slightly due to photographic lighting sources or your device.
+          </p>
+        </ul>
+      </li>
+  
+      <li class="py-1 border-b dropdown" [ngClass]="{'openMoreInfo': activeTab === 'moreInfo'}">
+        <p
+          class="flex justify-between items-center p-2 text-primary text-sm tracking-wider cursor-pointer dropdown-trigger"
+          (click)="handleTabClick('moreInfo')"
+          aria-haspopup="true"
+        >
+          MORE INFORMATION
+          <i [class]="activeTab === 'moreInfo' ? 'fa-chevron-down fa-solid' : 'fa-chevron-up fa-solid'" class="text-xl"></i>
+        </p>
+        <ul class="flex flex-col gap-4 px-2 font-primaryFont text-sm dropdown-content" aria-label="submenu">
+          <li class="pt-2">
+            <b>Manufactured & Marketed by:</b>
+          </li>
+          <li>
+            <b>Snitch Apparels Pvt. Ltd.</b>
+            <p class="text-xs">
+              No. 1/1, St. Johns Church Road, Bharathinagar, Bengaluru - 560005
+            </p>
+          </li>
+          <li class="pb-2">
+            <b>Country of Origin:</b>
+            <p>India</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  

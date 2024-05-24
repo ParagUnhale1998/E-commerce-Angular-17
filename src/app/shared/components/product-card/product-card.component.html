@@ -1,0 +1,22 @@
+<div [ngClass]="'justify-self-start items-start gap-2 bg-white hover:shadow-lg cursor-pointer overflow-hidden group'">
+  <a [routerLink]="['/products', extractedId]">
+      <div class="relative">
+        <img class="w-full" [src]="product.featuredImage.url" [alt]="product.title" />
+        <!-- Assuming you want to display the first image from the "images" array as the hover image -->
+        <img *ngIf="product.images.nodes[1]" 
+             loading="lazy"
+             class="top-0 left-0 absolute opacity-0 group-hover:opacity-100 w-full transition-opacity duration-300 ease-in-out"
+             [src]="product.images.nodes[1].url" 
+             [alt]="product.title" />
+      </div>
+      <div class="mt-2 px-2 capitalize">
+        <h2 class="group-hover:font-bold font-primaryFont text-[11px] text-primary tracking-[1px]">{{ product.title }}</h2>
+        <p class="mt-2 font-secondaryFont text-[12px] text-primary">Rs. {{ product.priceRange.minVariantPrice.amount }}</p>
+        <!-- Available Sizes -->
+        <ul *ngIf="sizes.length" class="flex justify-start items-start gap-3 mt-1 font-secondaryFont text-[12px] text-primary">
+            <li *ngFor="let size of sizes">{{ size }}</li>
+          </ul>
+      </div>
+    </a>
+  </div>
+  

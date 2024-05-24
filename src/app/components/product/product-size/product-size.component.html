@@ -1,0 +1,46 @@
+<div class="flex md:flex-row flex-col justify-center md:justify-start items-center md:items-center gap-2 py-2 w-fullsize-container">
+  <ng-container *ngIf="product.options[1]?.name === 'Size'">
+    <span class="font-secondaryFont tracking-widest">Size</span>
+  </ng-container>
+  <ng-container *ngIf="product.options[0]?.name !== 'Color'">
+    <div class="flex justify-center items-center gap-2 capitalize size-btn-container">
+      <span class="font-secondaryFont tracking-widest">{{ product.options[0]?.name }}</span>
+      <button
+        *ngFor="let size of product.options[0]?.values; let index = index"
+        class="border-[1px] hover:bg-black focus:bg-black active:bg-black p-1 border-black rounded-lg w-auto h-10 text-primary text-sm hover:text-white focus:text-white active:text-white"
+        [class.bg-black]="selectedSize === size"
+        [class.text-white]="selectedSize === size"
+        (click)="handleSizeClick(size)">
+        {{ size }}
+      </button>
+    </div>
+  </ng-container>
+  <div class="flex justify-center items-center gap-2 capitalize size-btn-container">
+    <button
+      *ngFor="let size of product.options[1]?.values; let index = index"
+      class="border-[1px] hover:bg-black focus:bg-black active:bg-black border-black rounded-lg w-10 h-10 text-primary text-sm hover:text-white focus:text-white active:text-white"
+      [class.bg-black]="selectedSize === size"
+      [class.text-white]="selectedSize === size"
+      (click)="handleSizeClick(size)">
+      {{ size }}
+    </button>
+  </div>
+</div>
+<div class="flex md:flex-row flex-col justify-center md:justify-start items-center md:items-center gap-2 md:mt-2 w-full size-container">
+  <span class="font-primaryFont tracking-widest">Quantity</span>
+  <div class="relative flex justify-center items-center border quantity-container">
+    <span class="hover:bg-black px-3 p-2 hover:text-white cursor-pointer" (click)="decreaseQuantity()">
+      <i class="fa fa-minus"></i> <!-- Assuming FontAwesome is installed -->
+    </span>
+    <input
+      type="text"
+      class="bg-white w-10 text-center"
+      [value]="selectedQuantity"
+      (input)="setQuantity($event)"
+      placeholder="1"
+    />
+    <span class="hover:bg-black px-3 p-2 hover:text-white cursor-pointer" (click)="increaseQuantity()">
+      <i class="fa fa-plus"></i> <!-- Assuming FontAwesome is installed -->
+    </span>
+  </div>
+</div>

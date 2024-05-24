@@ -1,0 +1,32 @@
+<div class="flex flex-col justify-center items-center gap-4 mt-4 cart-size-pincode-and-btn-container">
+  <app-product-size class="w-full"
+  [product]="product"
+  [selectedSize]="selectedSize"
+  (selectedSizeChange)="onSelectedSizeChange($event)"
+  [selectedQuantity]="selectedQuantity"
+  (selectedQuantityChange)="onSelectedQuantityChange($event)"
+></app-product-size>
+  
+    <div class="flex flex-col justify-center items-center gap-2 w-full cart-btn-container">
+      <button (click)="addToCart()" class="flex justify-center items-center gap-2 bg-black hover:bg-primary p-3 w-full font-primaryFont font-semibold text-[12px] text-white tracking-wider cartbtn">
+        ADD TO CART <i class="fi fi-shopping-cart"></i>
+      </button>
+      
+      <button (click)="addToWishlist()" class="flex justify-center items-center gap-2 border-2 p-3 hover:border-black w-full font-primaryFont font-semibold text-[12px] text-primary hover:text-black tracking-wider">
+        Add To Wishlist <i class="ai ai-fill-heart"></i>
+      </button>
+    </div>
+    
+    <div class="flex flex-col justify-center items-center shadow-md hover:shadow-lg mb-4 p-2 p-4 rounded-md w-full transform transition-transform hover:-translate-y-2 duration-500 cursor-pointer pincode-container">
+      <p class="font-primaryFont font-semibold text-sm">
+        Estimated Delivery Date & COD Checker
+      </p>
+      <form [formGroup]="pincodeForm" class="flex justify-between items-center w-full font-primaryFont pin-input-container">
+        <input type="text" formControlName="pincode" class="border-[1px] shadow-none px-4 p-2 w-[80%] text-sm outline-none" placeholder="Enter your pincode">
+        <button type="submit" class="bg-black hover:bg-primary p-2 rounded-r-md w-[20%] text-[12px] text-white uppercase tracking-wider cartbtn">
+          Check
+        </button>
+      </form>
+    </div>
+  </div>
+  

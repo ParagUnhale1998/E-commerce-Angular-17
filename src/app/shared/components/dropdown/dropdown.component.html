@@ -1,0 +1,15 @@
+<div class="relative">
+    <div
+      (click)="toggleDropdown()"
+      class="flex justify-between items-center p-4 border-t-[1px] cursor-pointer"
+    >
+      <span class='font-primaryFont font-semibold text-sm uppercase tracking-[2px]'>{{ title }}</span>
+      <span>{{ isOpen ? '▲' : '▼' }}</span>
+    </div>
+    <div [@toggleAnimation] *ngIf="isOpen" class="px-4 w-full">
+      <ul>
+        <ng-content></ng-content>
+      </ul>
+    </div>
+  </div>
+  

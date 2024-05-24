@@ -1,0 +1,14 @@
+<section id="all-products" class="mt-2">
+    <div [ngClass]="'justify-center container gap-4 grid p-2 ' + gridClass">
+      <ng-container *ngFor="let product of products.slice(0, visibleProducts); let i = index">
+        <app-product-card [product]="product" productCss="w-full p-2"></app-product-card>
+      </ng-container>
+    </div>
+    <div class="flex justify-center items-center my-4 px-6 show-more-btn w-full">
+      <button class="hover:shadow-lg px-4 p-3 border hover:font-bold text-[12px] text-primary capitalize"
+              (click)="handleShowMore()" style="letter-spacing: 1px;">
+        Show More
+      </button>
+    </div>
+  </section>
+  

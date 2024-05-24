@@ -1,0 +1,15 @@
+<section id="follow-us">
+    <div class="relative p-4 text-center heading">
+      <h5 class="font-primaryFont text-2xl">Follow us on Instagram</h5>
+    </div>
+    <div class="justify-center grid grid-cols-4 md:grid-cols-8 instagram-gallary-container cursor-pointer">
+      <div *ngFor="let item of instagramImages; let index = index" class="relative w-full card group">
+        <img [src]="item" [alt]="'instagramPost' + (index + 1)"
+             class="brightness-100 hover:brightness-50 transition-all duration-300" />
+        <div class="group-hover:block top-1/2 left-1/2 absolute hidden transform transition-all -translate-x-1/2 -translate-y-1/2 duration-500">
+          <i class="text-2xl text-white fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
