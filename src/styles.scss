@@ -8,6 +8,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --scrollbar-thumb-color: #b9b9b9;
+
+}
 body{
     width: 100%;
     scroll-behavior: smooth;
@@ -20,3 +24,25 @@ body{
   max-width: 1280px !important;
   }
 }
+
+/* ScrollBar  */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    scroll-behavior: smooth;
+    cursor: pointer;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:transparent
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+  
+    background: var(--scrollbar-thumb-color); 
+  }
+  

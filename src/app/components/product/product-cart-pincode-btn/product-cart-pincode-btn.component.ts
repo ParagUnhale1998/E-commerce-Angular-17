@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ProductSizeComponent } from '../product-size/product-size.component';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomToastrService } from '../../../core/services/custom-toastr.service';
 
 @Component({
   selector: 'app-product-cart-pincode-btn',
@@ -16,7 +17,7 @@ export class ProductCartPincodeBtnComponent {
   selectedQuantity: number = 1;
   pincodeForm!: FormGroup;
 
-  constructor(private fb: FormBuilder,) {}
+  constructor(private fb: FormBuilder,private toastrService:CustomToastrService) {}
 
   ngOnInit(): void {
     this.selectedSize = this.product.options[1] && this.product.options[1].values ? this.product.options[1].values[0] : null;
@@ -26,46 +27,46 @@ export class ProductCartPincodeBtnComponent {
   }
 
   addToCart() {
-    // let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    // const isProductInCart = cartItems.some(item => item.id === this.product.id);
+    const storedCartItems = localStorage.getItem('cartItems');
 
-    // if (isProductInCart) {
-    //   this.toastr.warning('Product is already in the cart');
-    //   return;
-    // }
+    let cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+    const isProductInCart = cartItems.some((item:any) => item.id === this.product.id);
 
-    // const totalValue = this.product.variants.nodes[0].price.amount;
-    // const productToAdd = { ...this.product, selectedSize: this.selectedSize, selectedQuantity: this.selectedQuantity, totalValue };
-    // cartItems.push(productToAdd);
-    // localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    // this.toastr.success('Product added successfully');
+    if (isProductInCart) {
+      this.toastrService.showWarning('Product is already in the cart','Warning');
+      return;
+    }
+
+    const totalValue = this.product.variants.nodes[0].price.amount;
+    const productToAdd = { ...this.product, selectedSize: this.selectedSize, selectedQuantity: this.selectedQuantity, totalValue };
+    cartItems.push(productToAdd);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    this.toastrService.showSuccess('Product added successfully','Successfull!');
   }
 
   addToWishlist() {
-    // let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
-    // const isProductInWishlist = wishlistItems.some(item => item.id === this.product.id);
+    const storedWishlistItems = localStorage.getItem('wishlistItems');
+    let wishlistItems =storedWishlistItems ? JSON.parse(storedWishlistItems) : [];
+    const isProductInWishlist = wishlistItems.some((item:any) => item.id === this.product.id);
 
-    // if (isProductInWishlist) {
-    //   this.toastr.warning('Product is already in the wishlist');
-    //   return;
-    // }
+    if (isProductInWishlist) {
+      this.toastrService.showWarning('Product is already in the wishlist','Warning');
+      return;
+    }
 
-    // const totalValue = this.product.variants.nodes[0].price.amount;
-    // const productToAdd = { ...this.product, selectedSize: this.selectedSize, selectedQuantity: this.selectedQuantity, totalValue };
-    // wishlistItems.push(productToAdd);
-    // localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
-    // this.toastr.success('Product added successfully');
+    const totalValue = this.product.variants.nodes[0].price.amount;
+    const productToAdd = { ...this.product, selectedSize: this.selectedSize, selectedQuantity: this.selectedQuantity, totalValue };
+    wishlistItems.push(productToAdd);
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+    this.toastrService.showSuccess('Product added successfully','Successfull!');
   }
 
   onSelectedSizeChange(size: string) {
     this.selectedSize = size;
-    // Additional logic if needed
   }
 
-  // Method to handle quantity change emitted from ProductSizeComponent
   onSelectedQuantityChange(quantity: number) {
     this.selectedQuantity = quantity;
-    // Additional logic if needed
   }
   
 }

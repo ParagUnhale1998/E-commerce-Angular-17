@@ -16,40 +16,101 @@
                 </a>
             </div>
             <div class="flex justify-between gap-2 md:gap-6 item-center text-2xl tabs">
-                <a routerLink="/">
+                <a routerLink="/home" aria-label="Home" ariaCurrentWhenActive="page">
                     <span class="cursor-pointer search">
                         <!-- <i class="text-iconcolor hover:text-black material-icons">home</i> -->
-                        <i class="text-iconcolor hover:text-black fa-home fa-solid"></i>
+                        <i routerLinkActive="active" class="text-iconcolor hover:text-black fa-home fa-solid"></i>
 
                     </span>
                 </a>
-                <a routerLink="/products">
+                <a routerLink="/products" aria-label="products" ariaCurrentWhenActive="page">
                     <span class="cursor-pointer search">
-                        <i class="text-iconcolor hover:text-black fa-shirt fa-solid"></i>
+                        <i routerLinkActive="active" class="text-iconcolor hover:text-black fa-shirt fa-solid"></i>
                     </span>
 
                 </a>
                 <span class="cursor-pointer search" (click)="toggleSearchbar()">
-                    <i *ngIf="showSearchbar; else searchIcon"
-                        class="text-iconcolor hover:text-black fa-solid fa-xmark"></i>
+                    @if (showSearchbar) {
+                        <i class="text-iconcolor hover:text-black fa-circle-xmark fa-solid"></i>
+
+                    }@else {
+                        <i class="text-iconcolor hover:text-black fa-search fa-solid"></i>
+
+                    }
+                    <!-- <i *ngIf="showSearchbar; else searchIcon"
+                        class="text-iconcolor hover:text-black fa-circle-xmark fa-solid"></i>
+
                     <ng-template #searchIcon>
                         <i class="text-iconcolor hover:text-black fa-search fa-solid"></i>
-                    </ng-template>
+                    </ng-template> -->
                 </span>
-                <div class="md:block hidden cursor-pointer wishList" (click)="openWishlist()">
+                <div class="md:block hidden cursor-pointer wishList" (click)="toggleWishlist()">
                     <i class="text-iconcolor hover:text-black fa-heart fa-solid"></i>
 
 
                 </div>
-                <span class="cursor-pointer cart" (click)="openCart()">
+                <span class="cursor-pointer cart" (click)="toggleCart()">
                     <i class="text-iconcolor hover:text-black fa-cart-shopping fa-solid"></i>
                 </span>
                 <div class="md:block hidden cursor-pointer account">
-                    <a routerLink="/login">
+                    <a (click)="navigateBasedOnAuth()">
                         <i class="text-iconcolor hover:text-black fa-solid fa-user"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Bottom NavBar -->
+    <nav id="bottom-nav" class="md:hidden">
+        <div class="bottom-0 z-50 fixed flex justify-around items-center gap-2 bg-white shadow-top py-1 w-full">
+            <div class="account">
+                <a (click)="navigateBasedOnAuth()">
+                    <i class="text-iconcolor text-xl hover:text-black cursor-pointer fa-solid fa-user"></i>
+                </a>
+            </div>
+            <div class="flex justify-center items-center cursor-pointer wishList" (click)="toggleWishlist()">
+                <i class="text-iconcolor text-xl hover:text-black cursor-pointer fa-heart fa-solid"></i>
+            </div>
+            <div class="flex justify-center items-center cursor-pointer collections">
+                <a routerLink="/products">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="m-0 p-0 pt-2 w-10" viewBox="0 0 96 120"
+                        xmlSpace="preserve">
+                        <g strokeWidth="1">
+                            <path d="M49.235,8v38.764H88V8H49.235z M86.096,44.859H51.14V9.905h34.956V44.859z" />
+                            <path d="M8,46.764h38.765V8H8V46.764z M9.905,9.905H44.86v34.955H9.905V9.905z" />
+                            <path d="M8,88h38.765V49.237H8V88z M9.905,51.142H44.86v34.954H9.905V51.142z" />
+                            <path d="M49.235,88H88V49.237H49.235V88z M51.14,51.142h34.956v34.954H51.14V51.142z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="cart" (click)="toggleCart()">
+                <i class="text-iconcolor text-xl hover:text-black cursor-pointer fa-cart-shopping fa-solid"></i>
+            </div>
+            <!-- <div class="search" (click)="toggleSearchbar()">
+            <i *ngIf="showSearchbar; else searchIcon" class="text-2xl text-iconcolor hover:text-black cursor-pointer fa-circle-xmark fa-solid"></i>
+            <ng-template #searchIcon>
+              <i class="text-2xl text-iconcolor hover:text-black cursor-pointer fa-search fa-solid"></i>
+            </ng-template>
+          </div> -->
+          <div class="search" (click)="toggleSearchbar()">
+            @if (showSearchbar) {
+                <i  class="text-iconcolor text-xl hover:text-black cursor-pointer fa-circle-xmark fa-solid"></i>
+
+            }@else {
+                <i  class="text-iconcolor text-xl hover:text-black cursor-pointer fa-search fa-solid"></i>
+
+            }
+            <!-- <i *ngIf="showSearchbar" class="text-iconcolor text-xl hover:text-black cursor-pointer fa-circle-xmark fa-solid"></i> -->
+            <!-- <i *ngIf="!showSearchbar" class="text-iconcolor text-xl hover:text-black cursor-pointer fa-search fa-solid"></i> -->
+        </div>
+        </div>
+    </nav>
+
+
+    <app-search-model *ngIf="showSearchbar" [showSearchbar]="showSearchbar"
+        (hideSearchBar)="hideSearchBar()"></app-search-model>
+    <app-cart *ngIf="cartOpen"></app-cart>
+    <app-wishlist *ngIf="wishlistOpen"></app-wishlist>
 </header>

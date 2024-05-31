@@ -1,19 +1,19 @@
 <section id="product-detail">
-    <div *ngIf="product" class="px-4 product-container">
+    <div *ngIf="product()" class="px-4 product-container">
       <div class="gap-4 grid grid-cols-1 md:grid-cols-2 container">
         <div class="w-full image-container">
-          <app-product-image [product]="product"></app-product-image>
+          <app-product-image [product]="product()"></app-product-image>
         </div>
         <div class="w-full font-secondaryFont detail-container">
-          <app-product-title [product]="product"></app-product-title>
+          <app-product-title [product]="product()"></app-product-title>
           <app-product-offer></app-product-offer>
-          <app-product-cart-pincode-btn [product]="product"></app-product-cart-pincode-btn>
+          <app-product-cart-pincode-btn [product]="product()"></app-product-cart-pincode-btn>
           <app-product-pay-description></app-product-pay-description>
           <app-product-policy-return></app-product-policy-return>
         </div>
       </div>
       <div class="w-full container related-products-container">
-        <app-product-related-product [relatedProducts]="relatedProducts" Heading="Related Articles"></app-product-related-product>
+        <app-product-related-product [relatedProducts]="relatedProducts()" Heading="Related Articles"></app-product-related-product>
       </div>
     </div>
   </section>

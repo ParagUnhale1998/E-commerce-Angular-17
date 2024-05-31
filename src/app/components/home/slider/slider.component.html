@@ -1,4 +1,3 @@
-<!-- src/app/slider-section/slider-section.component.html -->
 <section id="slider" class="m-0 p-0 md:h-[500px] cursor-pointer overflow-hidden">
     <ngx-slick-carousel class="carousel" [config]="slideConfig">
       <div ngxSlickItem *ngFor="let image of images; let index = index" class="slide" (click)="handleClick()">
@@ -6,4 +5,3 @@
       </div>
     </ngx-slick-carousel>
   </section>
-  

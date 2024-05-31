@@ -1,0 +1,1098 @@
+{
+  "users": [
+    {
+      "id": "e111",
+      "name": "Parag Unhale",
+      "email": "paragunhale1998@gmail.com",
+      "profilePic": "https://lh3.googleusercontent.com/a/ACg8ocKUo0HBy2mwddcJA7SmZbo5VvFPRUdxlKDUsg1TBWLbEyTLr9Z3=s96-c",
+      "cart": [],
+      "wishlist": [],
+      "myOrders": [
+        "09d0"
+      ]
+    },
+    {
+      "id": "d8cb",
+      "name": "U. PARAG",
+      "email": "unhaleparag@gmail.com",
+      "profilePic": "https://lh3.googleusercontent.com/a/ACg8ocKZnw9nJa3c4gsPkg7-EWJVCqFDRBLN_Smm3n44v5RkD2jUta7S=s96-c",
+      "cart": [],
+      "wishlist": [],
+      "myOrders": [
+        "af91",
+        "6753",
+        "eedd",
+        "3fa8"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "09d0",
+      "userDetails": {
+        "id": "e111",
+        "name": "Parag Unhale",
+        "email": "paragunhale1998@gmail.com"
+      },
+      "productsData": [
+        {
+          "id": "gid://shopify/Product/8213148172450",
+          "title": "Octet Jade Green Shirt",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSN1310-15-M132.jpg?v=1710744069",
+          "quantity": 2,
+          "Size": "S",
+          "totalPrice": 2198
+        }
+      ],
+      "paymentMethod": "cashOnDelivery",
+      "totalItems": 1,
+      "totalPrice": 2198,
+      "status": "pending",
+      "orderDate": "2024-04-11T13:43:28.037Z",
+      "AddressDetails": {
+        "fullName": "parag unhale",
+        "area": "small wadgao ",
+        "houseNumber": "2",
+        "pinCode": "445001",
+        "city": "yavatmal",
+        "email": "starboy123@gmail.com"
+      }
+    },
+    {
+      "id": "af91",
+      "userDetails": {
+        "id": "d8cb",
+        "name": "U. PARAG",
+        "email": "unhaleparag@gmail.com"
+      },
+      "productsData": [
+        {
+          "id": "gid://shopify/Product/8237322076322",
+          "Title": "Patchwork Checks Black Shirt",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSS2735-06-M33.jpg?v=1712043687",
+          "quantity": 1,
+          "Size": "S",
+          "totalPrice": 1199
+        },
+        {
+          "id": "gid://shopify/Product/8213147844770",
+          "Title": "Octet Light Pink Shirt",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSN1310-14-M32.jpg?v=1710412712",
+          "quantity": 2,
+          "Size": "S",
+          "totalPrice": 2198
+        }
+      ],
+      "paymentMethod": "cashOnDelivery",
+      "totalItems": 2,
+      "totalPrice": 3397,
+      "status": "pending",
+      "orderDate": "2024-05-27T14:35:09.831Z",
+      "AddressDetails": {
+        "fullName": "parag unhale",
+        "area": "asd",
+        "houseNumber": "asd",
+        "pinCode": "445200",
+        "city": "india",
+        "email": "paragunhale213@gmail.com"
+      }
+    },
+    {
+      "id": "6753",
+      "userDetails": {
+        "id": "d8cb",
+        "name": "U. PARAG",
+        "email": "unhaleparag@gmail.com"
+      },
+      "productsData": [
+        {
+          "id": "gid://shopify/Product/8213148172450",
+          "Title": "Octet Jade Green Shirt",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSN1310-15-M132.jpg?v=1710744069",
+          "quantity": 1,
+          "Size": "S",
+          "totalPrice": "1099.0"
+        }
+      ],
+      "paymentMethod": "cashOnDelivery",
+      "totalItems": 1,
+      "totalPrice": 1099,
+      "status": "pending",
+      "orderDate": "2024-05-28T06:40:47.297Z",
+      "AddressDetails": {
+        "fullName": "parag unhale",
+        "area": "asd",
+        "houseNumber": "asd",
+        "pinCode": "445200",
+        "city": "india",
+        "email": "paragunhale@gmail.com"
+      }
+    },
+    {
+      "id": "eedd",
+      "userDetails": {
+        "id": "d8cb",
+        "name": "U. PARAG",
+        "email": "unhaleparag@gmail.com"
+      },
+      "productsData": [
+        {
+          "id": "gid://shopify/Product/8014546829474",
+          "Title": "BLACK Perfume",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/Black_6a551343-f11f-4b30-8a16-d504bd4d5b7d.jpg?v=1691679629",
+          "quantity": 1,
+          "Size": null,
+          "totalPrice": "719.0"
+        },
+        {
+          "id": "gid://shopify/Product/8248354439330",
+          "Title": "Tactile Black Textured T-Shirt",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MST2268-04-M24.jpg?v=1712231899",
+          "quantity": 1,
+          "Size": "L",
+          "totalPrice": "999.0"
+        }
+      ],
+      "paymentMethod": "cashOnDelivery",
+      "totalItems": 2,
+      "totalPrice": 1718,
+      "status": "pending",
+      "orderDate": "2024-05-28T07:28:26.987Z",
+      "AddressDetails": {
+        "fullName": "parag unhale",
+        "area": "asd",
+        "houseNumber": "asd",
+        "pinCode": "445200",
+        "city": "india",
+        "email": "paragunhale@gmail.com"
+      }
+    },
+    {
+      "id": "3fa8",
+      "userDetails": {
+        "id": "d8cb",
+        "name": "U. PARAG",
+        "email": "unhaleparag@gmail.com"
+      },
+      "productsData": [
+        {
+          "id": "gid://shopify/Product/8014550040738",
+          "Title": "NOIR CLUB Perfume",
+          "image": "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/Noir.jpg?v=1691769612",
+          "quantity": 1,
+          "Size": null,
+          "totalPrice": 719
+        }
+      ],
+      "paymentMethod": "cashOnDelivery",
+      "totalItems": 1,
+      "totalPrice": 719,
+      "status": "pending",
+      "orderDate": "2024-05-30T12:20:34.670Z",
+      "AddressDetails": {
+        "fullName": "parag unhale",
+        "area": "asd",
+        "houseNumber": "asd",
+        "pinCode": "445200",
+        "city": "india",
+        "email": "asda@gmail.com"
+      }
+    }
+  ],
+  "carts": [
+    {
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 2
+        },
+        {
+          "productId": 3,
+          "quantity": 1
+        }
+      ],
+      "id": "a251"
+    }
+  ],
+  "products": [
+    {
+      "image": [
+        "/assets/newDrops/snitch-store050.jpg",
+        "/assets/newDrops/snitch-store051.jpg"
+      ],
+      "name": "City Breeze White Cargo Pant",
+      "id": "1",
+      "price": 1599,
+      "description": "Description of City Breeze White Cargo Pant",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Slim Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Pants",
+      "color": "White",
+      "newArrival": true,
+      "bestSeller": false,
+      "trending": false,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "cargo",
+        "pants",
+        "Trousers",
+        "comfortable",
+        "stylish",
+        "chinos"
+      ]
+    },
+    {
+      "image": [
+        "/assets/newDrops/snitch-store029.jpg",
+        "/assets/newDrops/snitch-store030.jpg"
+      ],
+      "name": "Wild Enough Olive Overshirt",
+      "id": "2",
+      "price": 1699,
+      "description": "Description of Wild Enough Olive Overshirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "overshirt",
+      "color": "Olive",
+      "newArrival": true,
+      "bestSeller": false,
+      "trending": false,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "shirts",
+        "comfortable",
+        "stylish",
+        "chinos"
+      ]
+    },
+    {
+      "image": [
+        "/assets/newDrops/snitch-store032.jpg",
+        "/assets/newDrops/snitch-store033.jpg"
+      ],
+      "name": "Wild Enough Green Overshirt",
+      "id": "3",
+      "price": 1699,
+      "description": "Description of Wild Enough Green Overshirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Green",
+      "newArrival": true,
+      "bestSeller": false,
+      "trending": false,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "image": [
+        "/assets/newDrops/snitch-store035.jpg",
+        "/assets/newDrops/snitch-store036.jpg"
+      ],
+      "name": "Patchwork Checks Blue Shirt",
+      "id": "4",
+      "price": 1199,
+      "description": "Description of Patchwork Checks Blue Shirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Blue",
+      "newArrival": true,
+      "bestSeller": false,
+      "trending": false,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "image": [
+        "/assets/newDrops/snitch-store026.jpg",
+        "/assets/newDrops/snitch-store027.jpg"
+      ],
+      "name": "Wild Enough Brown Overshirt",
+      "id": "5",
+      "price": 1699,
+      "description": "Description of Wild Enough Brown Overshirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": true,
+      "bestSeller": false,
+      "trending": false,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "image": [
+        "/assets/Trendings/snitch-store057.jpg",
+        "/assets/Trendings/snitch-store056.jpg"
+      ],
+      "name": "City Slicker Stone Blue Boot Cut Jeans",
+      "id": "6",
+      "price": 1799,
+      "description": "Description of City Slicker Stone Blue Boot Cut Jeans",
+      "details": {
+        "fabric": "98% Cotton, 2% Elastane",
+        "fit": "Boot Cut",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Jeans",
+      "color": "Blue",
+      "newArrival": false,
+      "bestSeller": false,
+      "trending": true,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "jeans",
+        "cargos",
+        "comfortable",
+        "stylish",
+        "chinos"
+      ]
+    },
+    {
+      "image": [
+        "/assets/Trendings/snitch-store047.jpg",
+        "/assets/Trendings/snitch-store048.jpg"
+      ],
+      "name": "Zeste Black Polo T-Shirt",
+      "id": "7",
+      "price": 1199,
+      "description": "Description of Zeste Black Polo T-Shirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Black",
+      "newArrival": false,
+      "bestSeller": false,
+      "trending": true,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "polo",
+        "t-shirt",
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "image": [
+        "/assets/Trendings/snitch-store044.jpg",
+        "/assets/Trendings/snitch-store045.jpg"
+      ],
+      "name": "Nordic Black Polo T-Shirt",
+      "id": "8",
+      "price": 1299,
+      "description": "Description of Nordic Black Polo T-Shirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Black",
+      "newArrival": false,
+      "bestSeller": false,
+      "trending": true,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "polo",
+        "t-shirt",
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "image": [
+        "/assets/Trendings/snitch-store041.jpg",
+        "/assets/Trendings/snitch-store042.jpg"
+      ],
+      "name": "Nordic Blue Polo T-Shirt",
+      "id": "9",
+      "price": 1299,
+      "description": "Description of Nordic Blue Polo T-Shirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Blue",
+      "newArrival": false,
+      "bestSeller": false,
+      "trending": true,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "polo",
+        "t-shirt",
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "image": [
+        "/assets/Trendings/snitch-store039.jpg",
+        "/assets/Trendings/snitch-store038.jpg"
+      ],
+      "name": "Nordic Orange Polo T-Shirt",
+      "id": "10",
+      "price": 1299,
+      "description": "Description of Nordic Orange Polo T-Shirt",
+      "details": {
+        "fabric": "100% Cotton",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Orange",
+      "newArrival": false,
+      "bestSeller": false,
+      "trending": true,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "polo",
+        "t-shirt",
+        "shirts",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "name": "City Breeze White Cargo Pant",
+      "id": "11",
+      "price": 1599,
+      "image": [
+        "/assets/All-products/allproducts09.jpg",
+        "/assets/All-products/allproducts10.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4,
+      "reviews": 10,
+      "tags": [
+        "cargo",
+        "utility",
+        "comfortable",
+        "Trousers"
+      ]
+    },
+    {
+      "name": "Wild Enough Brown Overshirt",
+      "id": "12",
+      "price": 1699,
+      "image": [
+        "/assets/All-products/allproducts15.jpg",
+        "/assets/All-products/allproducts16.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.2,
+      "reviews": 12,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "casual",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Wild Enough Olive Overshirt",
+      "id": "13",
+      "price": 1699,
+      "image": [
+        "/assets/All-products/allproducts18.jpg",
+        "/assets/All-products/allproducts19.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.3,
+      "reviews": 15,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "casual",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Wild Enough Green Overshirt",
+      "id": "14",
+      "price": 1699,
+      "image": [
+        "/assets/All-products/allproducts21.jpg",
+        "/assets/All-products/allproducts22.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.4,
+      "reviews": 18,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "casual",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Patchwork Checks Blue Shirt",
+      "id": "15",
+      "price": 1199,
+      "image": [
+        "/assets/All-products/allproducts24.jpg",
+        "/assets/All-products/allproducts25.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.6,
+      "reviews": 22,
+      "tags": [
+        "shirt",
+        "checks",
+        "stylish"
+      ]
+    },
+    {
+      "name": "City Breeze Navy Cargo Pant",
+      "id": "16",
+      "price": 1599,
+      "image": [
+        "/assets/All-products/allproducts27.jpg",
+        "/assets/All-products/allproducts28.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.7,
+      "reviews": 25,
+      "tags": [
+        "cargo",
+        "utility",
+        "comfortable",
+        "Trousers"
+      ]
+    },
+    {
+      "name": "City Breeze Grey Cargo Pant",
+      "id": "17",
+      "price": 1599,
+      "image": [
+        "/assets/All-products/allproducts30.jpg",
+        "/assets/All-products/allproducts31.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.8,
+      "reviews": 28,
+      "tags": [
+        "cargo",
+        "utility",
+        "comfortable",
+        "Trousers"
+      ]
+    },
+    {
+      "name": "City Breeze Cream Cargo Pant",
+      "id": "30",
+      "price": 1599,
+      "image": [
+        "/assets/All-products/allproducts33.jpg",
+        "/assets/All-products/allproducts34.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.9,
+      "reviews": 30,
+      "tags": [
+        "cargo",
+        "utility",
+        "comfortable"
+      ]
+    },
+    {
+      "name": "City Breeze Black Cargo Pant",
+      "id": "18",
+      "price": 1599,
+      "image": [
+        "/assets/All-products/allproducts36.jpg",
+        "/assets/All-products/allproducts37.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 5,
+      "reviews": 35,
+      "tags": [
+        "cargo",
+        "utility",
+        "comfortable",
+        "Trousers"
+      ]
+    },
+    {
+      "name": "Waffle Weave Cream T-Shirt",
+      "id": "19",
+      "price": 999,
+      "image": [
+        "/assets/All-products/allproducts39.jpg",
+        "/assets/All-products/allproducts40.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.1,
+      "reviews": 8,
+      "tags": [
+        "casual",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Waffle Weave Blue T-Shirt",
+      "id": "20",
+      "price": 999,
+      "image": [
+        "/assets/All-products/allproducts42.jpg",
+        "/assets/All-products/allproducts43.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Shirts",
+      "color": "Brown",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4,
+      "reviews": 9,
+      "tags": [
+        "casual",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Waffle Weave Grey T-Shirt",
+      "id": "21",
+      "price": 999,
+      "image": [
+        "/assets/All-products/allproducts45.jpg",
+        "/assets/All-products/allproducts46.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "T-Shirts",
+      "color": "Grey",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.3,
+      "reviews": 15,
+      "tags": [
+        "casual",
+        "comfortable",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Blockade Checks White Shirt",
+      "id": "22",
+      "price": 1099,
+      "image": [
+        "/assets/All-products/allproducts48.jpg",
+        "/assets/All-products/allproducts49.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "T-Shirts",
+      "color": "White",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.4,
+      "reviews": 18,
+      "tags": [
+        "checks",
+        "casual",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Blockade Checks Grey Shirt",
+      "id": "23",
+      "price": 1099,
+      "image": [
+        "/assets/All-products/allproducts51.jpg",
+        "/assets/All-products/allproducts52.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "T-Shirts",
+      "color": "Grey",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.5,
+      "reviews": 20,
+      "tags": [
+        "checks",
+        "casual",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Blockade Checks Pink Shirt",
+      "id": "24",
+      "price": 1099,
+      "image": [
+        "/assets/All-products/allproducts54.jpg",
+        "/assets/All-products/allproducts55.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "overshirt",
+      "color": "Pink",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.6,
+      "reviews": 22,
+      "tags": [
+        "checks",
+        "casual",
+        "stylish"
+      ]
+    },
+    {
+      "name": "Pull On Sky Blue Baggy Fit Jeans",
+      "id": "25",
+      "price": 1699,
+      "image": [
+        "/assets/All-products/allproducts57.jpg",
+        "/assets/All-products/allproducts58.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Jeans",
+      "color": "Sky Blue",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.7,
+      "reviews": 25,
+      "tags": [
+        "jeans",
+        "cargos",
+        "baggy fit",
+        "casual",
+        "essentials"
+      ]
+    },
+    {
+      "name": "Plush Pulse Green Overshirt",
+      "id": "26",
+      "price": 1499,
+      "image": [
+        "/assets/All-products/allproducts60.jpg",
+        "/assets/All-products/allproducts61.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "T-Shirts",
+      "color": "Green",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.8,
+      "reviews": 28,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "casual",
+        "stylish",
+        "essentials"
+      ]
+    },
+    {
+      "name": "Plush Pulse Navy Overshirt",
+      "id": "27",
+      "price": 1499,
+      "image": [
+        "/assets/All-products/allproducts63.jpg",
+        "/assets/All-products/allproducts64.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "overshirt",
+      "color": "Navy",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.9,
+      "reviews": 30,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "casual",
+        "stylish",
+        "essentials"
+      ]
+    },
+    {
+      "name": "Plush Pulse Black Overshirt",
+      "id": "28",
+      "price": 1499,
+      "image": [
+        "/assets/All-products/allproducts66.jpg",
+        "/assets/All-products/allproducts67.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "overshirt",
+      "color": "Black",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 5,
+      "reviews": 35,
+      "tags": [
+        "overshirt",
+        "oversized",
+        "casual",
+        "stylish",
+        "essentials"
+      ]
+    },
+    {
+      "name": "City Slicker Ink Blue Boot Cut Jeans",
+      "id": "29",
+      "price": 1799,
+      "image": [
+        "/assets/All-products/allproducts69.jpg",
+        "/assets/All-products/allproducts70.jpg"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo nisi et libero blandit lacinia.",
+      "details": {
+        "fabric": "100% Polyester",
+        "fit": "Regular Fit",
+        "size": "S, M, L, XL",
+        "modelHeight": "5 Feet 10 Inches"
+      },
+      "category": "Jeans",
+      "color": "Ink Blue",
+      "newArrival": false,
+      "bestSeller": true,
+      "trending": false,
+      "stars": 4.7,
+      "reviews": 25,
+      "tags": [
+        "jeans",
+        "cargos",
+        "boot cut",
+        "trousers",
+        "casual",
+        "essentials"
+      ]
+    }
+  ]
+}

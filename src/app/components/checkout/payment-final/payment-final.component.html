@@ -1,0 +1,165 @@
+<div class="gap-2 grid grid-cols-1 md:grid-cols-2 border">
+    <div class="first-container">
+      <div class="space-y-1 bg-white p-4 border-b font-primaryFont capitalize">
+        <h2 class="mb-2 font-semibold text-lg">Delivery Address:</h2>
+        <p><strong>Name:</strong> {{ billingInfo?.fullName }}</p>
+        <p><strong>Email:</strong> {{ billingInfo?.email }}</p>
+        <p><strong>House Number:</strong> {{ billingInfo?.houseNumber }}</p>
+        <p><strong>Area:</strong> {{ billingInfo?.area }}</p>
+        <p><strong>City:</strong> {{ billingInfo?.city }}</p>
+        <p><strong>Pin Code:</strong> {{ billingInfo?.pinCode }}</p>
+      </div>
+  
+      <div class="space-y-4 mt-4 p-4">
+        <h1 class="font-semibold text-xl">Select Payment Method:</h1>
+        <div class="flex flex-wrap justify-start items-start gap-4 w-full font-primaryFont text-sm payment-method-container">
+          <div class="flex items-center gap-1">
+            <input
+              type="radio"
+              id="cashOnDelivery"
+              name="paymentMethod"
+              value="cashOnDelivery"
+              [checked]="paymentMethod === 'cashOnDelivery'"
+              (change)="handlePaymentMethodChange($event)"
+              class=""
+            />
+            <label
+              [ngClass]="{'bg-black text-white': paymentMethod === 'cashOnDelivery', 'bg-gray-100': paymentMethod !== 'cashOnDelivery'}"
+              class="flex items-center gap-2 p-2 rounded font-semibold text-white cursor-pointer"
+              for="cashOnDelivery"
+            >
+              <img class="bg-white rounded-full w-10" src="/assets/Payment/pngwing.com (3).png" alt="" />
+              Cash on Delivery
+            </label>
+          </div>
+  
+          <div class="flex items-center gap-1">
+            <input
+              type="radio"
+              id="creditCard"
+              name="paymentMethod"
+              value="creditCard"
+              [checked]="paymentMethod === 'creditCard'"
+              (change)="handlePaymentMethodChange($event)"
+              class=""
+            />
+            <label
+              [ngClass]="{'bg-black text-white': paymentMethod === 'creditCard', 'bg-gray-100': paymentMethod !== 'creditCard'}"
+              class="flex items-center gap-2 p-2 rounded font-semibold text-white cursor-pointer"
+              for="creditCard"
+            >
+              <img class="bg-white rounded-full w-10 object-contain" src="/assets/Payment/pngwing.com (2).png" alt="" />
+              Credit Card
+            </label>
+          </div>
+  
+          <div class="flex items-center gap-1">
+            <input
+              type="radio"
+              id="gpay"
+              name="paymentMethod"
+              value="gpay"
+              [checked]="paymentMethod === 'gpay'"
+              (change)="handlePaymentMethodChange($event)"
+              class=""
+            />
+            <label
+              [ngClass]="{'bg-black text-white': paymentMethod === 'gpay', 'bg-gray-100': paymentMethod !== 'gpay'}"
+              class="flex items-center gap-2 p-2 rounded font-semibold text-white cursor-pointer"
+              for="gpay"
+            >
+              <img class="bg-white rounded-full w-12" src="/assets/Payment/pngwing.com (5).png" alt="" />
+              GPay
+            </label>
+          </div>
+        </div>
+  
+        <div *ngIf="paymentMethod === 'creditCard'" class="md:flex">
+          <div class="bg-white shadow-lg px-6 py-8 md:p-8 w-full">
+            <p class="mt-4 mb-6 font-primaryFont font-semibold text-gray-700 underline underline-offset-[4px]">
+              Enter Your Card Details
+            </p>
+            <form [formGroup]="formData">
+              <div class="mb-6">
+                <label class="block mb-2 text-gray-700">Card Number</label>
+                <input
+                  type="text"
+                  formControlName="cardNumber"
+                  class="border-gray-300 focus:border-indigo-300 focus:ring-opacity-20 shadow-sm p-2 border rounded-md w-full focus:outline-none focus:ring focus:ring-indigo-200"
+                  placeholder="0000 0000 0000 0000"
+                />
+              </div>
+  
+              <div class="flex gap-4 mb-6 w-full">
+                <div class="w-1/2">
+                  <label class="text-gray-700">Expiration Date</label>
+                  <input
+                    type="text"
+                    formControlName="expiryDate"
+                    class="border-gray-300 focus:border-indigo-300 focus:ring-opacity-20 shadow-sm p-2 border rounded-md w-full focus:outline-none focus:ring focus:ring-indigo-200"
+                    placeholder="MM/YY"
+                  />
+                </div>
+  
+                <div class="mb-6 w-1/2">
+                  <label class="text-gray-700">CVV</label>
+                  <input
+                    type="text"
+                    formControlName="cvv"
+                    class="border-gray-300 focus:border-indigo-300 focus:ring-opacity-20 shadow-sm p-2 border rounded-md w-full focus:outline-none focus:ring focus:ring-indigo-200"
+                    placeholder="123"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bg-PaymentBg h-screen second-container">
+      <div class="space-y-4 shadow-md px-4 py-4">
+        <div class="cart-item-container text-sm">
+          <div *ngFor="let product of cartData; let index = index" class="flex justify-between items-center font-primaryFont product-card">
+            <div class="flex justify-start items-center gap-2 image-heading-container">
+              <div class="relative border w-[20%] md:w-[20%] lg:w-[10%] image-container">
+                <img [src]="product.featuredImage.url" [alt]="product.title" />
+                <span class="top-[-5px] right-[-10px] absolute bg-gray-500 pt-[2px] rounded-full w-[25px] h-[25px] font-semibold text-center text-white">
+                  {{ product.selectedQuantity }}
+                </span>
+              </div>
+              <div class="flex flex-col heading">
+                <h2 class="tracking-wider"><b>Name: </b> {{ product.title.split(' - ')[0] }}</h2>
+                <span><b>Size: </b>{{ product.selectedSize }}</span>
+              </div>
+            </div>
+            <div class="price">
+              <span class="font-semibold capitalize tracking-widest">
+                Rs.{{ product.variants.nodes[0].price.amount * product.selectedQuantity }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2 w-full font-primaryFont text-primary total-container">
+          <div class="flex justify-between items-center w-full subtotal">
+            <span>Subtotal</span>
+            <b class="text-black">{{ carttotalPrice || 2323 }}</b>
+          </div>
+          <div class="flex justify-between items-center w-full shipping">
+            <span>Shipping</span>
+            <span>On shipping address</span>
+          </div>
+          <div class="flex justify-between items-center w-full total">
+            <b class="text-black">Total</b>
+            <span class="font-bold text-black">Rs {{ carttotalPrice || 2323 }}</span>
+          </div>
+          <div class="flex justify-center items-center w-full pay-button-container">
+            <button (click)="handleSubmit()" class="bg-green-500 p-3 w-1/2 font-bold text-gray-100">
+              Proceed To Payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

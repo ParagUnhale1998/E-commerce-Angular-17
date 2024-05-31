@@ -3,6 +3,7 @@ import { ProductsService } from '../../../core/services/products.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Subject, debounceTime } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -19,9 +20,16 @@ export class SearchComponent {
 
   private searchSubject = new Subject<string>();
 
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: ProductsService,private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['search']) {
+        this.searchQuery = params['search'];
+      }
+    });
+
     this.searchQuery = this.searchInput || '';
     // Setup debounced search
     this.searchSubject.pipe(

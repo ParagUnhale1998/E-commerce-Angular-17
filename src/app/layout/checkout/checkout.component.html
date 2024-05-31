@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="p-4">
+    <h1 class="p-4 w-full font-secondaryFont font-semibold text-center underline underline-offset-[10px]">
+      Checkout Process
+    </h1>
+    <div class="relative flex justify-between items-center w-full">
+      <div class="top-2/4 left-0 absolute bg-gray-300 w-full h-0.5 -translate-y-2/4"></div>
+      <div class="top-2/4 left-0 absolute bg-gray-900 w-full h-0.5 transition-all -translate-y-2/4 duration-500 ease-in"
+           [ngStyle]="{'width': (activeStep - 1) * 40 + 10 + '%'}"></div>
+      <div class="relative z-10 place-items-center grid bg-gray-900 rounded-full w-10 h-10 font-bold text-white transition-all duration-300"
+           [ngClass]="{'bg-gray-500': activeStep === 1}">
+        1
+      </div>
+      <div class="relative z-10 place-items-center grid bg-gray-900 rounded-full w-10 h-10 font-bold text-white transition-all duration-300"
+           [ngClass]="{'bg-gray-500': activeStep === 2}">
+        2
+      </div>
+      <div class="relative z-10 place-items-center grid bg-gray-900 rounded-full w-10 h-10 font-bold text-white transition-all duration-300"
+           [ngClass]="{'bg-gray-500': activeStep === 3}">
+        3
+      </div>
+    </div>
+    <div class="flex justify-between my-2">
+      <button class="bg-gray-900 px-6 py-3 rounded-lg font-bold text-white uppercase"
+              [disabled]="activeStep === 1"
+              (click)="handlePrev()">
+        Prev
+      </button>
+    </div>
+  </div>
+
+  <div class="p-2">
+    <app-cart-items *ngIf="activeStep === 1" (nextProcess)="handleNext()"
+                    (setCartData)="userCartItems = $event"
+                    (setTotalPrice)="totalPrice = $event"></app-cart-items>
+    <app-user-details-form *ngIf="activeStep === 2"
+                           [initialValues]="userDetails"
+                           (onSubmit)="handleUserDetailsSubmit($event)"></app-user-details-form>
+    <app-payment-final *ngIf="activeStep === 3"
+                       [billingInfo]="userDetails"
+                       [cartItems]="userCartItems"
+                       [totalPrice]="totalPrice"></app-payment-final>
+  </div>
+</div>

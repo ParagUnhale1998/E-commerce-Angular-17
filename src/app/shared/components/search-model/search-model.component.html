@@ -1,0 +1,19 @@
+<div class="z-50 fixed bg-white shadow-md md:mt-4 w-full search-container">
+    <div class="flex justify-between items-center p-4 search-box container">
+      <input
+        #inputRef
+        class="shadow-none m-0 p-0 border-none w-[80%] outline-none"
+        type="text"
+        placeholder="Search for products in this collection"
+        [(ngModel)]="searchQuery"
+        (input)="handleSearchInputChange($event)"
+        (keydown.enter)="navigateToProductPage()"      />
+      <button
+        class="text-primary text-xl hover:text-black cursor-pointer"
+        (click)="filterProductList()"
+      >
+      <i class="text-iconcolor hover:text-black fa-search fa-solid"></i>
+      </button>
+    </div>
+  </div>
+  

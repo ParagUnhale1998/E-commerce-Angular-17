@@ -1,3 +1,5 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<app-home-loading *ngIf="isLoading" ></app-home-loading>
+<router-outlet appScrollToTop></router-outlet>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#6A6A6A" type = "ball-spin" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
 <app-footer></app-footer>

@@ -1,6 +1,6 @@
 <div class="container">
-<app-search  [allProducts]="allProducts"  (setProducts)="receiveFilterProducts($event)" [searchInput]="searchValue"></app-search>
-<app-sort-filter [products]="allProducts" (setProducts)="receiveFilterProducts($event)"></app-sort-filter>
-<app-products-layout [filterProductsLength]="filterProducts.length" (setGridLayoutCss)="receiveGridLayoutClass($event)"></app-products-layout>
-<app-products-list [products]="filterProducts" [gridClass]="gridLayoutClass"></app-products-list>
+<app-search  [allProducts]="allProducts()"  (setProducts)="receiveFilterProducts($event)" [searchInput]="searchValue()"></app-search>
+<app-sort-filter [products]="allProducts()" (setProducts)="receiveFilterProducts($event)"></app-sort-filter>
+<app-products-layout [filterProductsLength]="filterProducts().length" (setGridLayoutCss)="receiveGridLayoutClass($event)"></app-products-layout>
+<app-products-list [products]="filterProducts()" [gridClass]="gridLayoutClass()"></app-products-list>
 </div>

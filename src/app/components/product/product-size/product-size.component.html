@@ -7,7 +7,7 @@
       <span class="font-secondaryFont tracking-widest">{{ product.options[0]?.name }}</span>
       <button
         *ngFor="let size of product.options[0]?.values; let index = index"
-        class="border-[1px] hover:bg-black focus:bg-black active:bg-black p-1 border-black rounded-lg w-auto h-10 text-primary text-sm hover:text-white focus:text-white active:text-white"
+        class="border-[1px] hover:bg-black focus:bg-black active:bg-black p-1 border-black rounded-lg w-12 h-10 text-primary text-sm hover:text-white focus:text-white active:text-white whitespace-nowrap overflow-hidden"
         [class.bg-black]="selectedSize === size"
         [class.text-white]="selectedSize === size"
         (click)="handleSizeClick(size)">

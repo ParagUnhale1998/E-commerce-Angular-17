@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import * as Constants from '../../../core/constants/app.constants';
 
 @Component({
   selector: 'app-season-fav',
@@ -10,23 +11,25 @@ import { RouterLink } from '@angular/router';
   styleUrl: './season-fav.component.scss'
 })
 export class SeasonFavComponent {
-  products = [
-    {
-      image: '/assets/Seasonal-Fav/snitch-store053.jpg',
-      name: 'essentials',
-    },
-    {
-      image: '/assets/Seasonal-Fav/snitch-store054.jpg',
-      name: 'oversized',
-    },
-    {
-      image: '/assets/Seasonal-Fav/snitch-store055.jpg',
-      name: 'chinos',
-    },
-    {
-      image: '/assets/Seasonal-Fav/snitch-store056.jpg',
-      name: 'casual',
-    },
-  ];
+  // products = [
+  //   {
+  //     image: '/assets/Seasonal-Fav/snitch-store053.jpg',
+  //     name: 'essentials',
+  //   },
+  //   {
+  //     image: '/assets/Seasonal-Fav/snitch-store054.jpg',
+  //     name: 'oversized',
+  //   },
+  //   {
+  //     image: '/assets/Seasonal-Fav/snitch-store055.jpg',
+  //     name: 'chinos',
+  //   },
+  //   {
+  //     image: '/assets/Seasonal-Fav/snitch-store056.jpg',
+  //     name: 'casual',
+  //   },
+  // ];
+
+  products = Constants.SEASON_FAV_PRODUCTS;
 
 }

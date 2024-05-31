@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="flex justify-center items-start gap-2 p-4 border-b font-primaryFont image-container">
+      <div class="profile-pic">
+        <img [src]="userData.profilePic" class="rounded-full" alt="" />
+      </div>
+  
+      <div class="flex flex-col justify-center items-start gap-2 detail-container">
+        <h1>
+          <b>Name:</b> {{ userData.name }}
+        </h1>
+        <h3>
+          <b>Email:</b> {{ userData.email }}
+        </h3>
+        <div class="flex flex-wrap justify-start items-center gap-2 btn-container">
+          <button
+            (click)="setCartOpen()"
+            class="flex justify-center items-center gap-2 bg-black hover:bg-primary p-2 rounded-md font-primaryFont font-semibold text-[12px] text-white tracking-wider"
+          >
+            MY CART
+          </button>
+  
+          <button
+            (click)="setWishlistOpen()"
+            class="flex justify-center items-center gap-2 bg-black hover:bg-primary p-2 rounded-md font-primaryFont font-semibold text-[12px] text-white tracking-wider"
+          >
+            MY WISHLIST
+          </button>
+          <button
+            (click)="logout()"
+            class="flex justify-center items-center gap-2 bg-red-500 hover:bg-red-600 p-2 rounded-md font-primaryFont font-semibold text-[12px] text-white tracking-wider"
+          >
+          Logout
+          </button>
+         
+        </div>
+      </div>
+    </div>
+  
+    <div class="myorder-container pt-2 container">
+      <h2 class="p-2 border-b font-bold font-secondaryFont text-center">
+        MY ORDERS
+      </h2>
+      <div class="cart-item-container overflow-y-scroll">
+        <div class="p-4 cart-card-container">
+          <div *ngFor="let order of myOrders">
+            <div *ngFor="let product of order.productsData" (click)="navigateToDetails(product)" class="flex justify-start items-start gap-2 py-2 border-b w-full cursor-pointer cart-card">
+              <div class="border-2 p-2 w-[25%] md:w-[20%] xl:w-[15%] image-container">
+                <img [src]="product.image" [alt]="product.title" />
+              </div>
+              <div class="relative flex flex-col justify-start items-start space-y-2 pt-2 w-[70%] font-primaryFont text-sm detail-container">
+                <h2 class="mb-1 tracking-wider">{{ product.title }}</h2>
+                <p class="text-xs md:text-lg" *ngIf="product.Size">
+                  <span class="font-semibold">Size :</span> {{ product.Size }}
+                </p>
+                <p class="text-xs md:text-lg">
+                  <span class="font-semibold">Quantity :</span> {{ product.quantity }}
+                </p>
+                <p class="text-xs md:text-lg">
+                  <span class="font-semibold">Status :</span> {{ order.status }}
+                </p>
+                <p class="text-xs md:text-lg">
+                  <span class="font-semibold">Payment Method :</span> {{ order.paymentMethod }}
+                </p>
+                <div class="relative flex justify-between items-center w-full quantity-total-container">
+                  <div class="w-full font-primaryFont total-container">
+                    <p class="font-semibold text-xs md:text-lg capitalize tracking-widest">
+                      Total : {{ product.totalPrice }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p *ngIf="myOrders.length <= 0" class="font-bold text-center text-red-500 tracking-wider">
+            No Orders <span class="text-blue-500 underline">Please Make Order</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -17,7 +17,7 @@ export class ProductCardComponent {
 
   ngOnInit() {
     this.extractSizes();
-    console.log(this.productCss,this.showProductCss)
+    // console.log(this.productCss,this.showProductCss)
   }
 
   get extractedId(): string {

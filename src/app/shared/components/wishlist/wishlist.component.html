@@ -1,0 +1,68 @@
+<div id="wishlistItems" class="top-0 right-0 z-[99] fixed flex justify-center items-center w-screen h-screen">
+    <div class="bg-gray-400 bg-opacity-50 shadow-md w-[30%] md:w-[50%] lg:w-[70%] h-full" (click)="closeWishlist()"></div>
+    
+    <!-- Main Container -->
+    <div class="flex flex-col justify-start items-center bg-white shadow-md w-[70%] md:w-[50%] lg:w-[30%] h-full">
+      <div class="flex justify-between items-center p-6 border-b w-full heading">
+        <h3 class="font-primaryFont font-semibold text-lg uppercase tracking-wider">
+          Wishlist
+        </h3>
+        <button class="ml-auto focus:outline-none" (click)="closeWishlist()">
+          <i class="text-2xl text-gray-500 hover:text-gray-700 fa-times fas"></i>
+          <!-- Adjust close icon as per your UI framework -->
+        </button>
+      </div>
+      
+      <ng-container *ngIf="wishlistItems.length > 0; else noProducts">
+      <div class="cart-item-container overflow-y-scroll">
+        <div class="p-4 cart-card-container">
+            <!-- Display wishlist items -->
+            <div *ngFor="let product of wishlistItems; let index = index"
+                 (click)="navigateToProductPage(product)"
+                 class="flex justify-between items-start gap-2 py-2 border-b w-full cursor-pointer cart-card">
+              <div class="p-2 w-[25%] image-container">
+                <img [src]="product.featuredImage.url" [alt]="product.title" />
+              </div>
+              <div class="relative flex flex-col justify-start items-start pt-2 w-[70%] text-sm detail-container">
+                <div class="flex justify-between items-center mb-2 w-full heading-container">
+                  <h2 class="tracking-wider">{{ product.title.split(" - ")[0] }}</h2>
+                  <button class="ml-auto focus:outline-none" (click)="removeItemFromWishlist($event, index)">
+                    <i class="text-2xl text-gray-500 hover:text-gray-700 fa-times fas"></i>
+                    <!-- Adjust remove icon as per your UI framework -->
+                  </button>
+                </div>
+                <p class="text-xs">
+                    <span class="font-semibold">Color:</span> {{ getProductColor(product) }}
+                </p>
+                <p class="text-xs">
+                  <span class="font-semibold">Size:</span> {{ product.selectedSize }}
+                </p>
+                <p class="text-xs">
+                  <span class="font-semibold">Quantity:</span> {{ product.selectedQuantity }}
+                </p>
+                <div class="relative flex justify-between items-center mt-2 w-full quantity-total-container">
+                  <div class="w-1/2 font-secondaryFont total-container">
+                    <span class="font-semibold capitalize tracking-widest">
+                      Rs {{ product.variants.nodes[0].price.amount }}
+                    </span>
+                  </div>
+                  <button (click)="addToCart(product)" class="flex justify-center items-center gap-2 bg-black hover:bg-primary hover:shadow-md p-2 rounded-md w-auto font-primaryFont font-semibold text-lg text-white tracking-wider cartbtn">
+                    <i class="fa-shopping-cart fas"></i>
+                    <!-- Adjust cart icon as per your UI framework -->
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+         
+        </div>
+      </ng-container>
+       <!-- Display message when no products in wishlist -->
+       <ng-template #noProducts>
+        <p class="font-bold text-center text-red-500 tracking-wider">No Products <span class="text-blue-500 underline">Please Add Products</span></p>
+      </ng-template>
+    </div>
+  </div>
+  

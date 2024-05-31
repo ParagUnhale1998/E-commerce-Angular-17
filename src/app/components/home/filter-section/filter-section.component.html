@@ -17,12 +17,13 @@
       </button>
     </div>
     <div class="overflow-hidden container products-container">
+      
       @if (activeTab === 'new') {
-        <app-product-slider  [products]="newArrivals" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
+        <app-product-slider  [products]="newArrivals()" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
         } @else if (activeTab === 'trending') {
-          <app-product-slider  [products]="trending" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
+          <app-product-slider  [products]="trending()" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
         } @else {
-          <app-product-slider  [products]="trending" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
+          <app-product-slider  [products]="trending()" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider>
         }
         <!-- <app-product-slider *ngIf="activeTab === 'new'" [products]="newArrivals" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider> -->
         <!-- <app-product-slider *ngIf="activeTab === 'trending'" [products]="trending" howManyProductShowCss="w-1/2 md:w-1/4"></app-product-slider> -->
